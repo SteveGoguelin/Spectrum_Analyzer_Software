@@ -1,6 +1,6 @@
 ## Spektrumanalysator-Software (Spectrum Analyzer Software)
 
-### Application Initialization
+### Initialization
 - **Purpose**: Starting the application.
 - **Logic**:
   - Loads the `spectrum_analyzer.fxml` file to define the UI layout.
@@ -134,3 +134,13 @@
   - Dark gray for tracks, borders, and backgrounds of interactive elements.
   - Courier New font, 12px size.
   - Custom styling for sliders, ComboBoxes, ToggleButtons, and scrollbars.
+
+---
+
+| ![](https://github.com/KMORaza/Spectrum_Analyzer_Software/blob/main/Spectrum%20Analyzer/src/main/screenshots/screen%20(1).png) | ![](https://github.com/KMORaza/Spectrum_Analyzer_Software/blob/main/Spectrum%20Analyzer/src/main/screenshots/screen%20(2).png) |
+|--------------------------------------------------|-------------------------------------|
+| ![](https://github.com/KMORaza/Spectrum_Analyzer_Software/blob/main/Spectrum%20Analyzer/src/main/screenshots/screen%20(3).png) | ![](https://github.com/KMORaza/Spectrum_Analyzer_Software/blob/main/Spectrum%20Analyzer/src/main/screenshots/screen%20(4).png) |
+| ![](https://github.com/KMORaza/Spectrum_Analyzer_Software/blob/main/Spectrum%20Analyzer/src/main/screenshots/screen%20(5).png) | ![](https://github.com/KMORaza/Spectrum_Analyzer_Software/blob/main/Spectrum%20Analyzer/src/main/screenshots/screen%20(6).png) |
+| ![](https://github.com/KMORaza/Spectrum_Analyzer_Software/blob/main/Spectrum%20Analyzer/src/main/screenshots/screen%20(7).png) | ![](https://github.com/KMORaza/Spectrum_Analyzer_Software/blob/main/Spectrum%20Analyzer/src/main/screenshots/screen%20(8).png) |
+
+---
