@@ -1,7 +1,5 @@
 ## Spektrumanalysator-Software (Spectrum Analyzer Software)
 
-
-
 ### Application Initialization
 - **Purpose**: Starting the application.
 - **Logic**:
@@ -28,7 +26,7 @@
   - **`updateMetrics()`**: Updates labels for channel power, ACPR, and signal type based on `SpectrumCanvas` calculations and `SignalProcessor` classification.
   - **`updateWindowInfo()`**: Displays window function characteristics (e.g., sidelobe levels, resolution) based on the selected window.
   - **`exportPowerReport()`**: Writes channel power and ACPR to a CSV file (`power_report.csv`).
-### 3. Signal Processing
+### Signal Processing
 - **Purpose**: Generates simulated signal data, applies window functions, demodulation, and analysis modes.
 - **Key Parameters**:
   - FFT size: 16,384 points.
@@ -58,7 +56,7 @@
     - In Swept-Tuned mode, attenuates amplitudes based on sweep speed (`0.8 / sweepSpeed`).
   - **Data Storage**:
     - Updates a `SpectrumData` object with amplitudes, phases, and frequency range.
-### Spectrum Visualizatio
+### Spectrum Visualization
 - **Purpose**: Renders the signal spectrum or persistence display on a canvas.
 - **Key Features**:
   - Display modes: Spectrum (real-time plot) or Persistence (intensity-based history).
