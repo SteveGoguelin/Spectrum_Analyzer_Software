@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:controller="spectrum.analyzer.software.SpectrumAnalyzerController" xmlns:fx="http://javafx.com/fxml" spacing="10" style="-fx-background-color: black;">
+    <children>
+        <VBox fx:id="canvasContainer" alignment="CENTER" />
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Frequency Range:" style="-fx-text-fill: lime; -fx-font-family: 'Courier New';"/>
+            <Slider fx:id="frequencySlider" min="20" max="50000000000" value="1000"/>
+            <Label fx:id="frequencyLabel" text="Max Freq: 1000 Hz" style="-fx-text-fill: lime; -fx-font-family: 'Courier New';"/>
+        </HBox>
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Display Mode:" style="-fx-text-fill: lime; -fx-font-family: 'Courier New';"/>
+            <ComboBox fx:id="modeComboBox" value="Spectrum"/>
+        </HBox>
+    </children>
+</VBox>

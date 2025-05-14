@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:controller="spectrum.analyzer.software.SpectrumAnalyzerController" xmlns:fx="http://javafx.com/fxml" spacing="15" style="-fx-background-color: black; -fx-padding: 10;">
+    <children>
+        <VBox fx:id="canvasContainer" alignment="CENTER" style="-fx-padding: 5;" />
+        <VBox fx:id="demodCanvasContainer" alignment="CENTER" prefHeight="160" style="-fx-padding: 5;" />
+        <TitledPane text="Frequency Settings" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New'; -fx-background-color: black;">
+            <content>
+                <ScrollPane fitToWidth="true" prefHeight="100" style="-fx-background-color: black; -fx-border-color: darkgray; -fx-border-width: 1;">
+                    <content>
+                        <GridPane hgap="10" vgap="5" style="-fx-padding: 10;">
+                            <children>
+                                <Label text="Frequency Range:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                                <Slider fx:id="frequencySlider" min="20" max="50000000000" value="1000" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                                <Label fx:id="frequencyLabel" text="Max Freq: 1000 Hz" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                                <Label text="Dynamic Range:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                                <Slider fx:id="dynamicRangeSlider" min="100" max="200" value="160" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                                <Label fx:id="dynamicRangeLabel" text="Dynamic Range: 160 dB" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                            </children>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </content>
+        </TitledPane>
+        <TitledPane text="Analysis Settings" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New'; -fx-background-color: black;">
+            <content>
+                <ScrollPane fitToWidth="true" prefHeight="180" style="-fx-background-color: black; -fx-border-color: darkgray; -fx-border-width: 1;">
+                    <content>
+                        <GridPane hgap="10" vgap="5" style="-fx-padding: 10;">
+                            <children>
+                                <Label text="Analysis Mode:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                                <ComboBox fx:id="analysisModeComboBox" value="FFT" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                                <Label text="Sweep Speed:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                                <Slider fx:id="sweepSpeedSlider" min="0.1" max="10.0" value="1.0" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                                <Label text="Window Function:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                                <ComboBox fx:id="windowComboBox" value="Hanning" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                                <Label fx:id="windowInfoLabel" text="Window Info: Sidelobe: -31 dB, Resolution: Moderate" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                                <Label text="Demodulation:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                                <ComboBox fx:id="demodulationComboBox" value="None" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                            </children>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </content>
+        </TitledPane>
+        <TitledPane text="Visualization Settings" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New'; -fx-background-color: black;">
+            <content>
+                <ScrollPane fitToWidth="true" prefHeight="100" style="-fx-background-color: black; -fx-border-color: darkgray; -fx-border-width: 1;">
+                    <content>
+                        <GridPane hgap="10" vgap="5" style="-fx-padding: 10;">
+                            <children>
+                                <Label text="Display Mode:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                                <ComboBox fx:id="modeComboBox" value="Spectrum" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                                <Label text="Log Scale:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                                <ToggleButton fx:id="logScaleToggle" text="Off" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                            </children>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </content>
+        </TitledPane>
+        <TitledPane text="Channel Settings" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New'; -fx-background-color: black;">
+            <content>
+                <ScrollPane fitToWidth="true" prefHeight="140" style="-fx-background-color: black; -fx-border-color: darkgray; -fx-border-width: 1;">
+                    <content>
+                        <GridPane hgap="10" vgap="5" style="-fx-padding: 10;">
+                            <children>
+                                <Label text="Channel Bandwidth (Hz):" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                                <TextField fx:id="channelBandwidthField" text="1000" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                                <Label text="Channel Count:" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                                <TextField fx:id="channelCountField" text="1" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                                <Button fx:id="exportButton" text="Export Power Report" style="-fx-background-color: darkgray; -fx-text-fill: yellow;" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                            </children>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </content>
+        </TitledPane>
+        <TitledPane text="Metrics" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New'; -fx-background-color: black;">
+            <content>
+                <ScrollPane fitToWidth="true" prefHeight="60" style="-fx-background-color: black; -fx-border-color: darkgray; -fx-border-width: 1;">
+                    <content>
+                        <GridPane hgap="10" vgap="5" style="-fx-padding: 10;">
+                            <children>
+                                <Label fx:id="channelPowerLabel" text="Channel Power: 0.00 dBm" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                                <Label fx:id="acprLabel" text="ACPR: 0.00 dB" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                                <Label fx:id="signalTypeLabel" text="Signal Type: Unknown" style="-fx-text-fill: yellow; -fx-font-family: 'Courier New';" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                            </children>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </content>
+        </TitledPane>
+    </children>
+</VBox>
